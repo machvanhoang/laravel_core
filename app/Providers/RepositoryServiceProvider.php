@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Repositories\Admin\AdminRepository;
-use App\Repositories\Admin\AdminRepositoryInterface;
+use App\Repositories\User\UserRepository;
+use App\Repositories\User\UserRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -16,8 +16,8 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(
-            AdminRepositoryInterface::class,
-            AdminRepository::class
+            UserRepositoryInterface::class,
+            UserRepository::class
         );
     }
 
